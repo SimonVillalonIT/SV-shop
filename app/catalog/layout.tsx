@@ -1,3 +1,4 @@
+import Header from "@/components/catalog/header";
 import * as React from "react";
 
 export default function CatalogLayout({
@@ -5,5 +6,10 @@ export default function CatalogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="w-full h-full flex flex-col flex-1">{children}</main>;
+  return (
+    <>
+      <Header />
+      <main className="w-full h-full flex flex-col flex-1 mt-20">{children}</main>
+    </>
+  );
 }
